@@ -551,3 +551,22 @@ section {
   border-color: #fff;
   text-shadow: 0 0 5px #ff5e57;
 }
+@media screen and (max-width: 480px) {
+  .feature-title {
+    font-size: 1.25rem;
+  }
+
+  .feature-description {
+    font-size: 0.95rem;
+  }
+
+  .video-container {
+    margin: 0 auto 1rem auto;
+  }
+}
+.feature-video {
+  width: 100%;
+  height: auto;
+  display: block;
+  background-color: #111;
+}
