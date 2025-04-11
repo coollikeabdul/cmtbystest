@@ -1,4 +1,4 @@
-// Smooth scrolling for nav links
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
@@ -9,7 +9,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
   });
   
-  // Logo cycling animation
+ 
 const logo = document.getElementById('logo-img');
 
 const images = [
@@ -27,7 +27,7 @@ setInterval(() => {
 }, 800);
 
   
-  // Handle modals
+  
   const cards = document.querySelectorAll('.project-card');
   const modals = document.querySelectorAll('.modal');
   const closeButtons = document.querySelectorAll('.close');
@@ -76,7 +76,7 @@ setInterval(() => {
   const confirmation = document.getElementById('confirmationMessage');
 
   form.addEventListener('submit', function (e) {
-    e.preventDefault(); // Prevent default to show confirmation first
+    e.preventDefault(); 
     const formData = new FormData(form);
 
     fetch(form.action, {
