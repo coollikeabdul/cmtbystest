@@ -102,3 +102,23 @@ form.addEventListener('submit', function (e) {
   });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const images = document.querySelectorAll('.blink-img');
+  let current = 0;
+
+  function showNextImage() {
+    images.forEach((img, index) => {
+      img.classList.remove('active');
+    });
+
+    images[current].classList.add('active');
+    current = (current + 1) % images.length;
+  }
+
+  // Start the loop
+  showNextImage();
+  setInterval(showNextImage, 1500);
+});
+
+
+
