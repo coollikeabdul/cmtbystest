@@ -17,7 +17,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     'https://res.cloudinary.com/dpv3s9krm/image/upload/v1744378314/Artboard_32_vlo4ra.png',
     'https://res.cloudinary.com/dpv3s9krm/image/upload/v1744378315/Artboard_37_saqd9k.png'
   ];
+
   let index = 0;
+  const logo = document.getElementById('logo-img');
+
   setInterval(() => {
     index = (index + 1) % images.length;
     logo.src = images[index];
