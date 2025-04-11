@@ -10,21 +10,22 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
   
   // Logo cycling animation
-  const logo = document.getElementById('logo-img');
-  const images = [
-    'https://res.cloudinary.com/dpv3s9krm/image/upload/v1744378313/Artboard_27_ictoct.png',
-    'https://res.cloudinary.com/dpv3s9krm/image/upload/v1744378315/Artboard_36_jcxctn.png',
-    'https://res.cloudinary.com/dpv3s9krm/image/upload/v1744378314/Artboard_32_vlo4ra.png',
-    'https://res.cloudinary.com/dpv3s9krm/image/upload/v1744378315/Artboard_37_saqd9k.png'
-  ];
+const logo = document.getElementById('logo-img');
 
-  let index = 0;
-  const logo = document.getElementById('logo-img');
+const images = [
+  'https://res.cloudinary.com/dpv3s9krm/image/upload/v1744378313/Artboard_27_ictoct.png',
+  'https://res.cloudinary.com/dpv3s9krm/image/upload/v1744378315/Artboard_36_jcxctn.png',
+  'https://res.cloudinary.com/dpv3s9krm/image/upload/v1744378314/Artboard_32_vlo4ra.png',
+  'https://res.cloudinary.com/dpv3s9krm/image/upload/v1744378315/Artboard_37_saqd9k.png'
+];
 
-  setInterval(() => {
-    index = (index + 1) % images.length;
-    logo.src = images[index];
-  }, 800);
+let index = 0;
+
+setInterval(() => {
+  index = (index + 1) % images.length;
+  logo.src = images[index];
+}, 800);
+
   
   // Handle modals
   const cards = document.querySelectorAll('.project-card');
