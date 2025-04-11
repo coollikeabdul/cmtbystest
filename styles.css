@@ -384,13 +384,13 @@ section {
   top: 0;
   left: 0;
   opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
 }
 
 /* Optional: Add a blinking flash effect */
 .blink-img.active {
   opacity: 1;
-  animation: blinkFlash 0.2s ease-in-out;
+  animation: blinkFlash 0.4s ease-in-out;
 }
 
 @keyframes blinkFlash {
@@ -551,6 +551,33 @@ section {
   border-color: #fff;
   text-shadow: 0 0 5px #ff5e57;
 }
+@media screen and (max-width: 768px) {
+  .feature-film-section {
+    padding: 2rem 1rem;
+  }
+
+  .feature-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .video-container {
+    max-width: 100%;
+    border-width: 2px;
+    border-radius: 8px;
+  }
+
+  .feature-description {
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 0 1rem;
+  }
+
+  .TheSlum {
+    font-size: 1rem;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .feature-title {
     font-size: 1.25rem;
@@ -569,4 +596,52 @@ section {
   height: auto;
   display: block;
   background-color: #111;
+}
+.audio-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ff5e57;
+  color: #fff;
+  border: none;
+  padding: 10px 14px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  transition: background-color 0.3s;
+}
+
+.audio-toggle:hover {
+  background-color: #ff3b3b;
+}
+#main-logo {
+  width: 200px;  
+  height: auto;
+  transition: width 1s ease; 
+  cursor: pointer;
+  
+}
+#main-logo:hover {
+  transform: scale(1.1); 
+  transition-duration: 0.9s;
+}
+
+/* Optional: Increase size when clicked (active state) */
+#main-logo:active {
+  transform: scale(1.05); /* Slightly bigger when clicked */
+}
+
+/* Make the logo smaller on smaller screens */
+@media screen and (max-width: 768px) {
+  #main-logo {
+    width: 150px;  /* Smaller logo on mobile */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #main-logo {
+    width: 120px;  /* Even smaller logo on very small screens */
+  }
 }
