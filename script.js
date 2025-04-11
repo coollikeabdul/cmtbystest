@@ -103,7 +103,7 @@ form.addEventListener('submit', function (e) {
 });
 
 
-const mainLogo = document.getElementById('main-logo');
+const mainLogo = document.getElementById('logo-img');
 const logoAudio = document.getElementById('logo-audio');
 
 mainLogo?.addEventListener('click', () => {
