@@ -370,10 +370,35 @@ section {
 
 .imgbg {
   position: relative;
-  width: 300px;
+  width: 400px;
+  height: 500px;
+  overflow: hidden;
   cursor: pointer;
-  animation: forwards 0.3;
 }
+
+.blink-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Optional: Add a blinking flash effect */
+.blink-img.active {
+  opacity: 1;
+  animation: blinkFlash 0.2s ease-in-out;
+}
+
+@keyframes blinkFlash {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0.9; }
+}
+
 
 /* Email link color fix */
 .email-link {
