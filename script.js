@@ -102,23 +102,12 @@ form.addEventListener('submit', function (e) {
   });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  const images = document.querySelectorAll('.blink-img');
-  let current = 0;
 
-  function showNextImage() {
-    images.forEach((img, index) => {
-      img.classList.remove('active');
-    });
+const mainLogo = document.getElementById('main-logo');
+const logoAudio = document.getElementById('logo-audio');
 
-    images[current].classList.add('active');
-    current = (current + 1) % images.length;
-  }
-
-  // Start the loop
-  showNextImage();
-  setInterval(showNextImage, 1500);
+mainLogo?.addEventListener('click', () => {
+  logoAudio.volume = 0.7;
+  logoAudio.currentTime = 0;
+  logoAudio.play().catch(e => console.log("Logo playback error:", e));
 });
-
-
-
