@@ -12,10 +12,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   // Logo cycling animation
   const logo = document.getElementById('logo-img');
   const images = [
-    './fwdlogos/Artboard 27.png',
-    './fwdlogos/Artboard 36.png',
-    './fwdlogos/Artboard 32.png',
-    './fwdlogos/Artboard 37.png'
+    'https://res.cloudinary.com/dpv3s9krm/image/upload/v1744378313/Artboard_27_ictoct.png',
+    'https://res.cloudinary.com/dpv3s9krm/image/upload/v1744378315/Artboard_36_jcxctn.png',
+    'https://res.cloudinary.com/dpv3s9krm/image/upload/v1744378314/Artboard_32_vlo4ra.png',
+    'https://res.cloudinary.com/dpv3s9krm/image/upload/v1744378315/Artboard_37_saqd9k.png'
   ];
   let index = 0;
   setInterval(() => {
